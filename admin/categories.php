@@ -21,7 +21,7 @@
                 <form action="" method="post" class="">
                     <div>
                         <label for="kategori" class="text-lg"></label>
-                        <input type="text" id="kategori" name="kategori" placeholder="input categories" class="border-2 block border-black my-2 p-2">
+                        <input type="text" id="kategori" name="kategori" placeholder="input categories" class="border-2 block border-black my-2 p-2" required="kategori gaboleh kosog">
                     </div>
                     <div class="items-center ">
                         <button class="py-2 px-5 my-2 mx-12 bg-blue-500 text-white rounded-xl border-2 " type="submit" name="simpan_kategori">Submit</button>
@@ -48,7 +48,7 @@
                             <div class="bg-green-100 border text-center border-green-400 w-full text-green-700 px-10 py-3 rounded relative" role="alert">
                                 <strong class="font-bold"><?php echo $kategori ?> berhasil ditambahkan</strong>
                             </div>
-                            <meta http_equiv="refresh" content="0; url=categories.php">
+                            <meta http-equiv="refresh" content="0; url=categories.php"/>
                             <?php
                             }
                         }
@@ -65,6 +65,7 @@
                 <tr>
                     <th class="px-6 py-2">No</th>
                     <th class="px-6 py2">Categori</th>
+                    <th class="px-6 py-2">Action</th>
                 </tr>
             </thead>
             <tbody>
@@ -79,9 +80,10 @@
             $jumlah = 1;
             while($data=mysqli_fetch_array($queryKategori)){
                 ?>
-                <tr>
+                <tr class="capitalize">
                     <td class="py-2 px-6"><?php echo $jumlah; ?></td>
                     <td class="py-2 px-6"><?php echo $data['nama']; ?></td>
+                    <td class="py-2 px-6 text-center"><a href="edit-categories.php?p=<?php echo $data['id']; ?>" class=" cursor-pointer text-center rounded-sm  bg-blue-400 text-white p-[0.30rem] w-7 h-7">GO</a></td>
                 </tr>
                 <?php
             $jumlah++;
