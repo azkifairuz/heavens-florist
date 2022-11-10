@@ -3,6 +3,7 @@
     require "../src/koneksi.php";
 ?>
 <!DOCTYPE html>
+
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -23,15 +24,15 @@
           <li class="relative top-0 ">
             <a
               href="index.php"
-              class="myAccount flex justify-between items-center  hover:bg-slate-700 transition-colors "
+              class="myAccount flex justify-between items-center  "
             >
             <?php echo $_SESSION['username']; ?>
             </a>
           </li>
           
       </ul>  
-      </div>
-
+    </div>
+    
       <!-- main navbar -->
       <nav class=" flex">
         <ul class="grid grid-flow-col">

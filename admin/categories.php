@@ -21,7 +21,7 @@
                 <form action="" method="post" class="">
                     <div>
                         <label for="kategori" class="text-lg"></label>
-                        <input type="text" id="kategori" name="kategori" placeholder="input categories" class="border-2 block border-black my-2 p-2" required="kategori gaboleh kosog">
+                        <input type="text" id="kategori" name="kategori" placeholder="input categories" class="border-2 block border-black my-2 p-2" required>
                     </div>
                     <div class="items-center ">
                         <button class="py-2 px-5 my-2 mx-12 bg-blue-500 text-white rounded-xl border-2 " type="submit" name="simpan_kategori">Submit</button>
