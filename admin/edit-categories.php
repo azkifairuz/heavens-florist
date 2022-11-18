@@ -19,7 +19,7 @@
 <body >
     <div class="mx-auto mt-20 container w-3/6  flex flex-col items-center">
         <h1 class=" text-2xl text-center mb-5">Edit Kategori</h1>
-        <form  action="" method="POST">
+        <form  action="" method="POST" class="mx-auto ">
             <div>
                 <label for="kategori" class="mr-2 block">Kategori</label>
                 <input type="text" name="kategori" id="kategori" value="<?php echo $data['nama'] ?>" class="w-60 border-2 p-1 text-l capitalize border-black">
@@ -35,7 +35,10 @@
                 $kategori = htmlspecialchars($_POST['kategori']);
                 if($data['nama']==$kategori){
                     ?>
-                            <meta http-equiv="refresh" content="0; url=categories.php"/>
+                            <div class="bg-red-100 border text-center text-sm border-red-400 mt-5 w-60 text-red-700 px-5 py-3 rounded relative" role="alert">
+                                <strong class="font-bold">tidak mengubah apapun</strong>
+                            </div>
+                            <meta http-equiv="refresh" content="2; url=categories.php"/>
                     
                     <?php
                 }else{
@@ -64,11 +67,23 @@
                 }
             }
             if (isset($_POST['delete-btn'])) {
+                $queryProduk = mysqli_query($con, "SELECT * FROM produk where kategori_id='$id'");
+                $checkQuery = mysqli_num_rows($queryProduk);
+
+                if($checkQuery > 0){
+                    ?>
+                    <div class="bg-red-100 border text-center text-sm border-red-400 mt-5 w-72 text-red-700 px-5 py-3 rounded relative" role="alert">
+                        <strong class="font-bold">Tidak bisa dihapus karena kategori sedang digunakan</strong>
+                    </div>
+                    <?php
+                    die();
+                }
+
                 $queryDelete = mysqli_query($con , "DELETE FROM kategori where id='$id'");
                 if($queryDelete) {
                     ?>
                     <div class="bg-green-100 border text-center text-sm border-green-400 mt-5 w-60 text-green-700 px-5 py-3 rounded relative" role="alert">
-                    <strong class="font-bold">Kategori Berhasil diHapus</strong>
+                        <strong class="font-bold">Kategori Berhasil diHapus</strong>
                     </div>
 
                     <meta http-equiv="refresh" content="1; url=categories.php"/>

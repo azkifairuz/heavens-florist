@@ -7,22 +7,22 @@
     <title>Heaven's Florist</title>
     <link rel="stylesheet" href="../dist/output.css" />
   </head>
-  <body>
+  <body class="bg-[#f8f8f8]">
     <header
-      class="flex fixed top-0 left-0 right-0 justify-between bg-[#1f1c3f] text-white px-4 z-50 text-lg"
+      class="flex fixed top-0 left-0 right-0 justify-between text-white  bg-primary-500 text-gr px-4 z-50 text-lg"
     >
-      <div class="py-navbar-item px-navbar-item">
-        <a href=""> Logo </a>
+      <div class="md:mt-3 md:ml-10 py-navbar-item px-navbar-item md:p-0">
+        <img class="md:w-20 md:ml-10 w-14" src="../item/logo3.png" alt="">
       </div>
       <!-- Responsive navbar -->
       <div
-        class="mobilenav hidden md:hidden fixed top-14 bottom-0 h-full left-0 bg-slate-900 shadow-2xl"
+        class="mobilenav hidden md:hidden fixed top-14 bottom-0 h-full left-0 bg-primary-500 border-t-2 border-black shadow-2xl"
       >
         <ul>
           <li>
             <a
               href="/src/index.html"
-              class="flex items-center py-2 px-navbar-item hover:bg-slate-700"
+              class="flex items-center py-2 px-navbar-item hover:bg-[#19126d]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -44,14 +44,14 @@
           <li>
             <a
               href="#"
-              class="block py-2 px-navbar-item hover:bg-slate-700 transition-colors"
+              class="block py-2 px-navbar-item hover:bg-[#19126d] transition-colors"
               >Catagories</a
             >
           </li>
           <li>
             <a
               href="#"
-              class="block py-2 px-navbar-item hover:bg-slate-700 transition-colors"
+              class="block py-2 px-navbar-item hover:bg-[#19126d] transition-colors"
               >Catalog</a
             >
           </li>
@@ -60,7 +60,7 @@
           <li>
             <a
               href="/src/cart.html"
-              class="flex item-center py-2 px-navbar-item hover:bg-slate-700 transition-colors"
+              class="flex item-center py-2 px-navbar-item hover:bg-[#19126d] transition-colors"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -79,134 +79,7 @@
               Cart
             </a>
           </li>
-          <li class="relative">
-            <a
-              href="#"
-              class="myAccount flex justify-between items-center py-2 px-navbar-item hover:bg-slate-700 transition-colors"
-            >
-              My Account
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5 ml-3 arrowleft"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5 ml-3 arrowbot hidden"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </a>
-            <ul
-              class="menuAccount hidden items-center bg-slate-800 w-full pb-3 text-sm"
-            >
-              <li>
-                <a
-                  href="/src/profile.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  My Profile
-                </a>
-              </li>
-              <li class="">
-                <a
-                  href="/src/cart.html"
-                  class="py-2 px-5 items-center hover:bg-slate-700 flex"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M21 8.25c0-2.485-2.099-4.5-4.688-4.5-1.935 0-3.597 1.126-4.312 2.733-.715-1.607-2.377-2.733-4.313-2.733C5.1 3.75 3 5.765 3 8.25c0 7.22 9 12 9 12s9-4.78 9-12z"
-                    />
-                  </svg>
-                  Wishlist
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/src/orders.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                    />
-                  </svg>
-                  Orders
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/src/logout.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
-                    />
-                  </svg>
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </li>
+
           <li>
             <a
               href="./login.html"
@@ -232,8 +105,8 @@
           </li>
           <li>
             <a
-              href="/src/signup.html"
-              class="flex items-center py-2 px-3 transition-colors hover:bg-emerald-700 bg-emerald-500"
+              href="http://localhost/website%20e-commerce/user/register.php"
+              class="flex items-center py-2 px-3 transition-colors hover:bg-[#166534] bg-[#16a34a]"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -262,7 +135,7 @@
           <li>
             <a
               href="index.html"
-              class="flex items-center py-navbar-item px-navbar-item hover:bg-slate-700 transition-colors mr-4"
+              class="flex items-center py-navbar-item px-navbar-item hover:bg-[#19126d] transition-colors mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -283,13 +156,13 @@
           </li>
           <li class="categories">
             <span
-              class="block cursor-pointer py-navbar-item px-navbar-item hover:bg-slate-700 transition-colors mr-4"
+              class="block cursor-pointer py-navbar-item px-navbar-item hover:bg-[#19126d] transition-colors mr-4"
               >Catagories</span
             >
           </li>
           <li>
             <span
-              class="catalog block cursor-pointer py-navbar-item px-navbar-item hover:bg-slate-700 transition-colors mr-4"
+              class="catalog block cursor-pointer py-navbar-item px-navbar-item hover:bg-[#19126d] transition-colors mr-4"
               >Catalog</span
             >
           </li>
@@ -297,140 +170,10 @@
       </nav>
       <nav class="hidden md:block">
         <ul class="grid grid-flow-col items-center">
-          <li class="relative">
-            <span
-              
-              class="cursor-pointer flex myAccount items-center py-navbar-item px-navbar-item hover:bg-slate-700 transition-colors mr-4"
-            >
-              My Account
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5 ml-3 arrowleft"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M8.25 4.5l7.5 7.5-7.5 7.5"
-                />
-              </svg>
-              <svg
-                xmlns="http://www.w3.org/2000/svg"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke-width="1.5"
-                stroke="currentColor"
-                class="w-5 h-5 ml-3 arrowbot hidden"
-              >
-                <path
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
-                  d="M19.5 8.25l-7.5 7.5-7.5-7.5"
-                />
-              </svg>
-            </span>
-            <ul
-              class="menuAccount hidden absolute items-center bg-slate-800 right-0 w-36 pb-3 mx-7 text-sm"
-            >
-              <li>
-                <a
-                  href="/src/profile.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z"
-                    />
-                  </svg>
-                  My Profile
-                </a>
-              </li>
-              <li class="">
-                <a
-                  href="/src/watchlist.html"
-                  class="py-2 px-5 items-center hover:bg-slate-700 flex"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-3"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M2.25 3h1.386c.51 0 .955.343 1.087.835l.383 1.437M7.5 14.25a3 3 0 00-3 3h15.75m-12.75-3h11.218c1.121-2.3 2.1-4.684 2.924-7.138a60.114 60.114 0 00-16.536-1.84M7.5 14.25L5.106 5.272M6 20.25a.75.75 0 11-1.5 0 .75.75 0 011.5 0zm12.75 0a.75.75 0 11-1.5 0 .75.75 0 011.5 0z"
-                    />
-                  </svg>
-                  Cart
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/src/orders.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M20.25 7.5l-.625 10.632a2.25 2.25 0 01-2.247 2.118H6.622a2.25 2.25 0 01-2.247-2.118L3.75 7.5M10 11.25h4M3.375 7.5h17.25c.621 0 1.125-.504 1.125-1.125v-1.5c0-.621-.504-1.125-1.125-1.125H3.375c-.621 0-1.125.504-1.125 1.125v1.5c0 .621.504 1.125 1.125 1.125z"
-                    />
-                  </svg>
-
-                  Orders
-                </a>
-              </li>
-              <li>
-                <a
-                  href="/src/logout.html"
-                  class="py-2 px-5 items-center flex hover:bg-slate-700"
-                >
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    stroke-width="1.5"
-                    stroke="currentColor"
-                    class="w-5 h-5 mr-2"
-                  >
-                    <path
-                      stroke-linecap="round"
-                      stroke-linejoin="round"
-                      d="M15.75 9V5.25A2.25 2.25 0 0013.5 3h-6a2.25 2.25 0 00-2.25 2.25v13.5A2.25 2.25 0 007.5 21h6a2.25 2.25 0 002.25-2.25V15M12 9l-3 3m0 0l3 3m-3-3h12.75"
-                    />
-                  </svg>
-
-                  Logout
-                </a>
-              </li>
-            </ul>
-          </li>
           <li>
             <a
               href="login.html"
-              class="flex items-center py-navbar-item px-navbar-item hover:bg-slate-700 transition-colors mr-4"
+              class="flex items-center py-navbar-item px-navbar-item hover:bg-[#19126d] transition-colors mr-4"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -452,8 +195,8 @@
           </li>
           <li>
             <a
-              href="/src/signup.html"
-              class="flex items-center py-2 px-3 transition-colors hover:bg-emerald-700 rounded-md bg-emerald-500"
+              href="http://localhost/website%20e-commerce/user/register.php"
+              class="flex items-center py-2 px-3 transition-colors hover:bg-[#166534] bg-[#16a34a] rounded-md"
             >
               <svg
                 xmlns="http://www.w3.org/2000/svg"
@@ -511,20 +254,19 @@
     </header>
     <!-- home page -->
     <div
-      class="md:h-full md:text-white mx-auto md:rounded-xl md:px-5 pt-2 my-10 md:my-28 md:max-w-[800px] md:bg-[#3c3d50]"
+      class="md:h-full md:text-primary-500 mx-auto md:rounded-xl md:px-5 pt-2 my-10 md:my-28 md:max-w-[800px] md:bg-[#d4d1ed]"
     >
       <section class="homePage">
         <div class="my-3 mx-3">
           <!-- title -->
           <div class="flex items-center mt-10 mb-3">
-            <h1 class="text-xl md:text-2xl">Our Recomendation</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 24 24"
               fill="#ffea00"
               stroke-width="1"
               stroke="black"
-              class="w-5 h-5 md:mt-1"
+              class="w-6 h-6 mr-3 md:mt-1"
             >
               <path
                 fill-rule="evenodd"
@@ -532,181 +274,101 @@
                 clip-rule="evenodd"
               />
             </svg>
+            <h1 class="text-xl md:text-2xl text-primary-500">Our Recomendation</h1>
           </div>
           <!-- container -->
           <div class="container py-5 w-full h-full">
             <!-- card -->
             <div class="min-h-screen md:min-h-0 flex flex-col justify-center">
               <div class="relative m-3 flex flex-wrap mx-auto justify-center">
-                <div
-                  class="relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
+                <div class="card relative max-w-sm min-w-[340px] bg-white border-2  hover:shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer">
                   <div class="overflow-x-hidden rounded-2xl relative">
-                    <img
+                      <img
                       class="h-40 rounded-xl w-full object-cover bg-bottom"
-                      src="../item/delapan.png"
-                    />
-                    <p
+                      src="../item/rose red.jpeg?>"
+                      />
+                      <p
                       class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
+                      <a href="#" class="py-1 h-8 w-20" >
+                          <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6 group-hover:opacity-50 opacity-70"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="black"
+                          >
+                              <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                              />
+                          </svg>
+                      </a> 
+                      </p>
                   </div>
                   <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
+                      <div>
                       <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Lily
+                          rose red
                       </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
-                  <div class="overflow-x-hidden rounded-xl relative">
-                    <img
-                      class="h-40 rounded-2xl w-full object-scale-down"
-                      src="../item/dua.jpg"
-                    />
-                    <p
-                      class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
+                      <p class="text-md text-gray-800 mt-0">Rp 70k</p>
+                      <span class="rounded-sm mb-2 text-center mt-2 capitalize">tersedia</span>
+                      </div>
+                      <div
+                      class="flex flex-col-reverse mb-1 mr-4 cursor-pointer"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
+                      <a href="#" class="py-1 h-8 w-20" ><button class="hover:bg-[#166534] bg-[#16a34a] text-white rounded-md w-20 py-1 h-8"> Buy</button></a>
+                      <span class="rounded-sm mb-2 text-center">Setangkai</span>
+                      </div>
                   </div>
-                  <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
-                      <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Mawar
-                      </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
-                  <div class="overflow-x-hidden rounded-xl relative">
-                    <img
-                      class="h-40 rounded-2xl w-full object-scale-down"
-                      src="../item/dua.jpg"
-                    />
-                    <p
-                      class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
-                  </div>
-                  <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
-                      <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Mawar
-                      </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
-                  </div>
-                </div>
-
-                <div
-                  class="relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
-                  <div class="overflow-x-hidden rounded-xl relative">
-                    <img
-                      class="h-40 rounded-2xl w-full object-scale-down"
-                      src="../item/dua.jpg"
-                    />
-                    <p
-                      class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
-                      >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
-                  </div>
-                  <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
-                      <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Mawar
-                      </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
-                  </div>
-                </div>
               </div>
-            </div>
+              <div class="card relative max-w-sm min-w-[340px] bg-white border-2  hover:shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer">
+                  <div class="overflow-x-hidden rounded-2xl relative">
+                      <img
+                      class="h-40 rounded-xl w-full object-cover bg-bottom"
+                      src="../item/list produk/bouquet_lily.jpeg?>"
+                      />
+                      <p
+                      class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
+                      >
+                      <a href="#" class="py-1 h-8 w-20" >
+                          <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6 group-hover:opacity-50 opacity-70"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="black"
+                          >
+                              <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                              />
+                          </svg>
+                      </a> 
+                      </p>
+                  </div>
+                  <div class="mt-4 pl-2 mb-2 flex justify-between">
+                      <div>
+                      <p class="text-lg font-semibold text-gray-900 mb-0">
+                          Lily
+                      </p>
+                      <p class="text-md text-gray-800 mt-0">Rp 250k</p>
+                      <span class="rounded-sm mb-2 text-center mt-2 capitalize">tersedia</span>
+                      </div>
+                      <div
+                      class="flex flex-col-reverse mb-1 mr-4 cursor-pointer"
+                      >
+                      <a href="#" class="py-1 h-8 w-20" ><button class="hover:bg-[#166534] bg-[#16a34a] text-white rounded-md w-20 py-1 h-8"> Buy</button></a>
+                      <span class="rounded-sm mb-2 text-center">Bucket</span>
+                      </div>
+                  </div>
+              </div>
+              <a href="http://localhost/website%20e-commerce/user/login.php"><h1 class="text-2xl cursor-pointer">Login Untuk Lihat Lebih banyak</h1></a>
+  </div>
           </div>
         </div>
       </section>
@@ -716,14 +378,13 @@
         <div class="my-3 mx-3">
           <!-- title -->
           <div class="flex items-center mb-3">
-            <h1 class="text-xl md:text-2xl">Catalog</h1>
             <svg
               xmlns="http://www.w3.org/2000/svg"
               fill="#ba181b"
               viewBox="0 0 24 24"
               stroke-width="1.5"
               stroke="#000000"
-              class="w-5 h-5 md:w-6 md:h-6 text- mt-2"
+              class="w-5 h-5 md:w-6 md:h-6 mr-2 mt-2"
             >
               <path
                 stroke-linecap="round"
@@ -736,95 +397,101 @@
                 d="M6 6h.008v.008H6V6z"
               />
             </svg>
+            <h1 class="text-xl md:text-2xl">Catalog</h1>
           </div>
           <!-- container -->
           <div class="container py-5 w-full h-full">
             <!-- card -->
-            <div class="min-h-screen md:min-h-0 flex flex-col justify-center">
+            <div class="min-h-0 flex flex-col justify-center">
               <div class="relative m-3 flex flex-wrap mx-auto justify-center">
-                <div
-                  class="card relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
+                <div class="card relative max-w-sm min-w-[340px] bg-white border-2  hover:shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer">
                   <div class="overflow-x-hidden rounded-2xl relative">
-                    <img
+                      <img
                       class="h-40 rounded-xl w-full object-cover bg-bottom"
-                      src="../item/delapan.png"
-                    />
-                    <p
+                      src="../item/rose red.jpeg?>"
+                      />
+                      <p
                       class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
+                      <a href="#" class="py-1 h-8 w-20" >
+                          <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6 group-hover:opacity-50 opacity-70"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="black"
+                          >
+                              <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                              />
+                          </svg>
+                      </a> 
+                      </p>
                   </div>
                   <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
+                      <div>
                       <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Lily
+                          rose red
                       </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
+                      <p class="text-md text-gray-800 mt-0">Rp 70k</p>
+                      <span class="rounded-sm mb-2 text-center mt-2 capitalize">tersedia</span>
+                      </div>
+                      <div
+                      class="flex flex-col-reverse mb-1 mr-4 cursor-pointer"
+                      >
+                      <a href="#" class="py-1 h-8 w-20" ><button class="hover:bg-[#166534] bg-[#16a34a] text-white rounded-md w-20 py-1 h-8"> Buy</button></a>
+                      <span class="rounded-sm mb-2 text-center">Setangkai</span>
+                      </div>
                   </div>
-                </div>
+              </div>
 
-                <div
-                  class="relative max-w-sm min-w-[340px] bg-white shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer"
-                >
-                  <div class="overflow-x-hidden rounded-xl relative">
-                    <img
-                      class="h-40 rounded-2xl w-full object-scale-down"
-                      src="../item/dua.jpg"
-                    />
-                    <p
+              <div class="card relative max-w-sm min-w-[340px] bg-white border-2  hover:shadow-2xl rounded-3xl p-2 mx-1 my-3 cursor-pointer">
+                  <div class="overflow-x-hidden rounded-2xl relative">
+                      <img
+                      class="h-40 rounded-xl w-full object-cover bg-bottom"
+                      src="../item/list produk/sunflower.jpeg"
+                      />
+                      <p
                       class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
-                    >
-                      <svg
-                        xmlns="http://www.w3.org/2000/svg"
-                        class="h-6 w-6 group-hover:opacity-50 opacity-70"
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="black"
                       >
-                        <path
-                          stroke-linecap="round"
-                          stroke-linejoin="round"
-                          stroke-width="1.5"
-                          d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
-                        />
-                      </svg>
-                    </p>
+                      <a href="#" class="py-1 h-8 w-20" >
+                          <svg
+                              xmlns="http://www.w3.org/2000/svg"
+                              class="h-6 w-6 group-hover:opacity-50 opacity-70"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="black"
+                          >
+                              <path
+                              stroke-linecap="round"
+                              stroke-linejoin="round"
+                              stroke-width="1.5"
+                              d="M3 3h2l.4 2M7 13h10l4-8H5.4M7 13L5.4 5M7 13l-2.293 2.293c-.63.63-.184 1.707.707 1.707H17m0 0a2 2 0 100 4 2 2 0 000-4zm-8 2a2 2 0 11-4 0 2 2 0 014 0z"
+                              />
+                          </svg>
+                      </a> 
+                      </p>
                   </div>
                   <div class="mt-4 pl-2 mb-2 flex justify-between">
-                    <div>
+                      <div>
                       <p class="text-lg font-semibold text-gray-900 mb-0">
-                        Mawar
+                          bunga matahari
                       </p>
-                      <p class="text-md text-gray-800 mt-0">$340</p>
-                    </div>
-                    <div
-                      class="flex flex-col-reverse mb-1 mr-4 group cursor-pointer"
-                    >
-                      
-                    </div>
+                      <p class="text-md text-gray-800 mt-0">Rp 75k</p>
+                      <span class="rounded-sm mb-2 text-center mt-2 capitalize">tersedia</span>
+                      </div>
+                      <div
+                      class="flex flex-col-reverse mb-1 mr-4 cursor-pointer"
+                      >
+                      <a href="#" class="py-1 h-8 w-20" ><button class="hover:bg-[#166534] bg-[#16a34a] text-white rounded-md w-20 py-1 h-8"> Buy</button></a>
+                      <span class="rounded-sm mb-2 text-center">setangkai</span>
+                      </div>
                   </div>
-                </div>
+              </div>
+                <a href="http://localhost/website%20e-commerce/user/login.php"><h1 class="text-2xl cursor-pointer">Login Untuk Lihat Lebih banyak</h1></a>
               </div> 
             </div>
           </div>
@@ -833,32 +500,35 @@
       <!-- catalog -->
       <!-- categories page -->
       <section class="categoriesPage my-3 mx-3">
-        <div class="my-3">
-          <h1>Catagories</h1>
+        <div class="my-3 flex flex-row">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="mr-2 w-6 h-6">
+            <path d="M11.25 4.533A9.707 9.707 0 006 3a9.735 9.735 0 00-3.25.555.75.75 0 00-.5.707v14.25a.75.75 0 001 .707A8.237 8.237 0 016 18.75c1.995 0 3.823.707 5.25 1.886V4.533zM12.75 20.636A8.214 8.214 0 0118 18.75c.966 0 1.89.166 2.75.47a.75.75 0 001-.708V4.262a.75.75 0 00-.5-.707A9.735 9.735 0 0018 3a9.707 9.707 0 00-5.25 1.533v16.103z" />
+          </svg>          
+          <h1 >Catagories</h1>
         </div>
         <div class="my-5">
           <div
             class="grid mx-auto w-[320px] h-full py-3 px-3 grid-cols-2 gap-2 text-center md:w-[800px] md:grid-cols-4"
           >
-            <span class="w-36 h-36 block bg-[#b5e6db]">
-              <img src="../item/ikon_flower.png" class="w-36 h-36" alt="" />
+          <span class="w-36 h-36 block transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+            <img src="../item/kategori 1.png" class="w-36 h-36" alt="" />
             </span>
-            <span class="w-36 h-36 block bg-[#b5e6db]">
-              <img
-                src="../item/ikon_flower_bucket.png"
+            <span class="w-36 h-36 block  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 ">
+            <img
+                src="../item/kategori 2.png"
                 class="w-36 h-36"
                 alt=""
-              />
+            />
             </span>
-            <span class="w-36 h-36 block bg-[#b5e6db]">
-              <img
-                src="../item/ikon_flower_bucket_for_wedding.png"
+            <span class="w-36 h-36 block  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110 ">
+            <img
+                src="../item/kategori 3.png"
                 class="w-36 h-36"
                 alt=""
-              />
+            />
             </span>
-            <span class="w-36 h-36 block bg-[#b5e6db]">
-              <img src="../item/ikon_flower.png" class="w-36 h-36" alt="" />
+            <span class="w-36 h-36 block  transition ease-in-out delay-150 hover:-translate-y-1 hover:scale-110">
+            <img src="../item/kategori 4.png" class="w-36 h-36" alt="" />
             </span>
           </div>
         </div>
