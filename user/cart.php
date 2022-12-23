@@ -1,18 +1,6 @@
 <?php
 require "../src/koneksi.php";
 session_start();
-$idProduk = $_GET["id"];
-
-
-//jika sudah ada ditambah
-if ($idProduk==true) {
-  if (isset($_SESSION['keranjang'][$idProduk])) {
-    $_SESSION['keranjang'][$idProduk]+=1;
-}else {
-    $_SESSION['keranjang'][$idProduk]=1;
-}
-}
-
 
 $jumlahBunga = count($_SESSION["keranjang"]);
 // echo "<script>alert('berhasil menambahkan ke keranjang')</script>";
@@ -50,6 +38,7 @@ $jumlahBunga = count($_SESSION["keranjang"]);
               $subharga = $data['harga'] * $jumlah;
               
               ?>
+            
               <div class="flex items-center hover:bg-gray-100 -mx-8 px-6 py-5">
                 <div class="flex w-2/5"> <!-- product -->
                   <div class="w-20">
@@ -62,17 +51,12 @@ $jumlahBunga = count($_SESSION["keranjang"]);
                   </div>
                 </div>
                 <div class="flex justify-center w-1/5">
-                  <svg class="minQty cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512"><path d="M416 208H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h384c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                  </svg>
 
-                  <input class="qty mx-2 border text-center w-8" name="qty" id="qty" type="text" value="<?php echo $jumlah ?>">
-
-                  <svg class="addQty cursor-pointer fill-current text-gray-600 w-3" viewBox="0 0 448 512">
-                    <path d="M416 208H272V64c0-17.67-14.33-32-32-32h-32c-17.67 0-32 14.33-32 32v144H32c-17.67 0-32 14.33-32 32v32c0 17.67 14.33 32 32 32h144v144c0 17.67 14.33 32 32 32h32c17.67 0 32-14.33 32-32V304h144c17.67 0 32-14.33 32-32v-32c0-17.67-14.33-32-32-32z"/>
-                  </svg>
+                  <input class="qty mx-2 border text-center w-8" name="qty" id="qty" type="text" disabled value="<?php echo $jumlah ?>">
+                  
                 </div>
-                <input class="price text-center w-1/5 font-semibold text-sm" value="<?php echo $data['harga'] ?>k" disabled >
-                <input class="totalprice text-center w-1/5 font-semibold text-sm" value=" <?php echo $subharga?>k" disabled>
+                <input class="price text-center w-1/5 font-semibold text-sm" value="Rp. <?php echo number_format($data['harga']) ?>" disabled >
+                <input class="totalprice text-center w-1/5 font-semibold text-sm" value="Rp. <?php echo number_format($subharga)?>" disabled>
               </div>
               <?php
               $totalharga+=$subharga;
@@ -101,13 +85,31 @@ $jumlahBunga = count($_SESSION["keranjang"]);
         </div>
 
           <div class="flex font-semibold justify-between py-6 text-sm uppercase">
-            <span>Total cost<input class="totalCost" type="text" value=' <?php echo $totalharga ?>k ' disabled></span>
+            <span>Total cost  Rp. <input class="totalCost" type="text" value='<?php echo number_format($totalharga) ?>' disabled></span>
             <span></span>
           </div>
-          <a href="payment.php"><button class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button></a>
+          <form  method="post">
+            <button type="submit" name="checkout" class="bg-indigo-500 font-semibold hover:bg-indigo-600 py-3 text-sm text-white uppercase w-full">Checkout</button>
+          </form>
         </div>
       </div>
+        <?php
+          if (isset($_POST["checkout"])) {
+            $idPelanggan = $_SESSION['login'];
+            $tanggalPembelian =  date("y-m-d");
+            $totalBelanja = $totalharga;
+            //menyimpann data ke tabel checkout
+            $con->query("INSERT INTO checkout(id_user,tanggal_pembelian,total_beli) VALUES('$idPelanggan','$tanggalPembelian','$totalBelanja')");
+            $idPembelian = $con->insert_id;
 
+            //menyimpan data ke tabel detail checkout
+            foreach ($_SESSION["keranjang"] as $idProduk => $jumlah)
+            {
+              $con->query("INSERT INTO checkout_detail(id_pembelian,id_user,id_produk,tanggal,jumlah) VALUES('$idPembelian','$idPelanggan','$idProduk','$tanggalPembelian','$jumlah')");
+            }
+          }
+          print_r($_SESSION["keranjang"]);
+        ?>
     </div>
   </div>
   <script src="cart.js"></script>

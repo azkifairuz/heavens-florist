@@ -58,20 +58,7 @@
             </div>
             <div>
                 <label for="stok">Stok</label>
-                <select name="stok" id="stok"  class="block border-2 border-black rounded-md w-full p-2" required>
-                        <option value="<?php echo $dataProduk["ketersediaan_stok"] ?>"><?php echo $dataProduk["ketersediaan_stok"] ?></option>
-                        <?php
-                        if($dataProduk["ketersediaan_stok"]== 'tersedia'){
-                            ?>
-                                <option value="tidak tersedia">Habis</option>
-                            <?php
-                        }else{
-                            ?>
-                                <option value="tidak tersedia">Tersedia</option>
-                            <?php
-                        }
-                        ?>
-                </select>
+                <input name="stok" id="stok"  class="block border-2 border-black rounded-md w-full p-2" required>
             </div>
             <div>
                 <button name="btn-simpan" class="bg-blue-400 hover:bg-blue-500 rounded px-5 py-1 text-white mt-5">Edit</button>
@@ -105,7 +92,7 @@
                             </div>
                             <?php
                         }else{
-                            $queryUpdate = mysqli_query($con , "UPDATE produk SET kategori_id='$kategori',nama_bunga='$catalog', harga='$harga', detail='$detile',ketersediaan_stok='$stok' WHERE id='$id'");
+                            $queryUpdate = mysqli_query($con , "UPDATE produk SET kategori_id='$kategori',nama_bunga='$catalog', harga='$harga', detail='$detile',stok='$stok' WHERE id='$id'");
                             if($nama_file != ""){
                                 if($image_size > 5000000){
                                     ?>
@@ -143,7 +130,7 @@
                 if($queryDelete) {
                     ?>
                     <div class="bg-green-100 border text-center text-sm border-green-400 mt-5 w-60 text-green-700 px-5 py-3 rounded relative" role="alert">
-                        <strong class="font-bold">Kategori Berhasil diHapus</strong>
+                        <strong class="font-bold">catalog Berhasil diHapus</strong>
                     </div>
 
                     <meta http-equiv="refresh" content="1; url=catalog.php"/>

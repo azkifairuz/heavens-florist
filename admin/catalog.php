@@ -54,10 +54,7 @@
                     </div>
                     <div>
                         <label for="stok"></label>
-                        <select name="stok" id="stok" class="w-full py-2 rounded-md border-2 border-black mt-5">
-                            <option value="tersedia">Tersedia</option>
-                            <option value="Habis">Habis</option>
-                        </select>
+                        <input name="stok" id="stok" class="w-full py-2 rounded-md border-2 border-black mt-5">
                     </div>
                     <div class="items-center ">
                         <button class="md:w-full md:mx-auto mx-24 py-2 px-5 mt-2  bg-blue-500 text-white rounded-xl border-2 " type="submit" name="simpan_catalog">Submit</button>
@@ -107,7 +104,7 @@
                             }
                             //nambah data ke database
                              //mengambil nama catalog yg ada di table catalog
-                            $queryTambah = mysqli_query($con, "INSERT INTO  produk (kategori_id, nama_bunga, harga ,gambar ,detail, ketersediaan_stok) VALUE('$kategori','$catalog','$harga','$new_name','$detile','$stok')");
+                            $queryTambah = mysqli_query($con, "INSERT INTO  produk (kategori_id, nama_bunga, harga ,gambar ,detail, stok) VALUE('$kategori','$catalog','$harga','$new_name','$detile','$stok')");
                             if($queryTambah){
                                 ?>
                             <div class="bg-green-100 border text-center text-sm border-green-400 mt-5 w-60 text-green-700 px-5 py-3 rounded relative" role="alert">
@@ -145,21 +142,21 @@
         </tr>
     <?php 
         } else{
-            $jumlah = 1;
+            $no = 1;
             while($data=mysqli_fetch_array($queryCatalog)){
                 ?>
                 <tr class="text-xs capitalize ">
-                    <td class="py-2 px-6"><?php echo $jumlah; ?></td>
+                    <td class="py-2 px-6"><?php echo $no; ?></td>
                     <td class="py-2 px-6"><?php echo $data['nama_bunga']; ?></td>
                     <td class="py-2 px-6"><?php echo $data['nama_kategori']; ?></td>
-                    <td class="py-2 px-6">Rp <?php echo $data['harga']; ?>K</td>
+                    <td class="py-2 px-6">Rp. <?php echo number_format($data['harga']); ?></td>
                     <td class="py-2 px-6"><img src="../item/<?php echo $data['gambar']; ?>" alt="flower" class="w-20 h-20"></td>
                     <td class="py-2 w-20"><?php echo $data['detail']; ?></td>
-                    <td class="py-2 px-6"><?php echo $data['ketersediaan_stok']; ?></td>
+                    <td class="py-2 px-6"><?php echo $data['stok']; ?></td>
                     <td class="py-2 px-6 text-center"><a href="edit-catalog.php?p=<?php echo $data['id']; ?>" class=" cursor-pointer text-center rounded-md  bg-blue-400 text-white p-[0.30rem] w-7 h-7">GO</a></td>
                 </tr>
                 <?php
-            $jumlah++;
+            $no++;
         }
     }
     ?>

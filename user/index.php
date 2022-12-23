@@ -318,7 +318,7 @@
                     </li>
                     <li>
                         <a
-                        href="/src/orders.html"
+                        href="orders.php"
                         class="py-2 px-5 items-center flex hover:bg-[#19126d]"
                         >
                         <svg
@@ -653,7 +653,7 @@
                                     <p
                                     class="absolute right-2 top-2 bg-white rounded-full p-2 cursor-pointer group"
                                     >
-                                    <a href="cart.php?id=<?php echo $data["id"]?>" class="py-1 h-8 w-20" >
+                                    <a href="sessioncart.php?id=<?php echo $data["id"]?>" class="py-1 h-8 w-20" >
                                         <svg
                                             xmlns="http://www.w3.org/2000/svg"
                                             class="h-6 w-6 group-hover:opacity-50 opacity-70"
@@ -676,8 +676,8 @@
                                     <p class="text-lg font-semibold text-gray-900 mb-0">
                                         <?php echo $data['nama_bunga'] ?>
                                     </p>
-                                    <p class="text-md text-gray-800 mt-0">Rp <?php echo $data["harga"] ?>k</p>
-                                    <span class="rounded-sm mb-2 text-center mt-2 capitalize"><?php echo $data['ketersediaan_stok'] ?></span>
+                                    <p class="text-md text-gray-800 mt-0">Rp <?php echo number_format($data["harga"]) ?></p>
+                                    <span class="rounded-sm mb-2 text-center mt-2 capitalize"><?php echo $data['stok'] ?></span>
                                     </div>
                                     <div
                                     class="flex flex-col-reverse mb-1 mr-4 cursor-pointer"
