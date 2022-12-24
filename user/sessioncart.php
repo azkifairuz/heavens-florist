@@ -17,5 +17,5 @@ else {
 
 $jumlahBunga = count($_SESSION["keranjang"]);
 echo "<script>alert('berhasil menambahkan ke keranjang')</script>";
-echo "<script>location = 'cart.php'</script>"
+echo "<script>location = 'index.php'</script>"
 ?>

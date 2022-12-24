@@ -1,7 +1,7 @@
 <?php
     require "session.php";
     require "../src/koneksi.php";
-echo $_SESSION['username'];
+echo $_SESSION['login'];
 ?>
 
 <!DOCTYPE html>

@@ -50,7 +50,7 @@
                     if($chehckData > 0) {
                         if ($password == $data['password']){
                             $_SESSION['username'] = $data['username'];
-                            $_SESSION['login'] = true;
+                            $_SESSION['login'] = $data['id'];
                             header('location: index.php');
                         }
                         else{

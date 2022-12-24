@@ -1,8 +1,14 @@
 <?php
 require "../src/koneksi.php";
 session_start();
+if (isset($_SESSION["keranjang"])) {
+  # code...
+  $jumlahBunga = count($_SESSION["keranjang"]);
+}else {
+  
+  $jumlahBunga = 0;
+}
 
-$jumlahBunga = count($_SESSION["keranjang"]);
 // echo "<script>alert('berhasil menambahkan ke keranjang')</script>";
 // echo "<script>location = 'index.php'</script>"
 ?>
@@ -85,7 +91,7 @@ $jumlahBunga = count($_SESSION["keranjang"]);
         </div>
 
           <div class="flex font-semibold justify-between py-6 text-sm uppercase">
-            <span>Total cost  Rp. <input class="totalCost" type="text" value='<?php echo number_format($totalharga) ?>' disabled></span>
+            <span>Total cost  <input class="totalCost" type="text" value='Rp. <?php echo number_format($totalharga) ?>' disabled></span>
             <span></span>
           </div>
           <form  method="post">
@@ -101,13 +107,16 @@ $jumlahBunga = count($_SESSION["keranjang"]);
             //menyimpann data ke tabel checkout
             $con->query("INSERT INTO checkout(id_user,tanggal_pembelian,total_beli) VALUES('$idPelanggan','$tanggalPembelian','$totalBelanja')");
             $idPembelian = $con->insert_id;
-
             //menyimpan data ke tabel detail checkout
             foreach ($_SESSION["keranjang"] as $idProduk => $jumlah)
             {
               $con->query("INSERT INTO checkout_detail(id_pembelian,id_user,id_produk,tanggal,jumlah) VALUES('$idPembelian','$idPelanggan','$idProduk','$tanggalPembelian','$jumlah')");
+              unset($_SESSION["keranjang"][$idProduk]);
             }
+            
+            echo "<script>location = 'payment.php'</script>";
           }
+          
           print_r($_SESSION["keranjang"]);
         ?>
     </div>

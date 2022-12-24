@@ -10,8 +10,13 @@
 <body>
 <?php
     require "../src/koneksi.php";
+    require "session.php";
     require "navbar.php";
-    $queryCheckout = mysqli_query($con , "SELECT a.*, b.nama_bunga AS nama_produk FROM checkout_detail a JOIN produk b on a.id_produk=b.id");
+    // session_start();
+    $idUser = $_SESSION["login"];
+    
+    // mysqli_query($con , "SELECT a.*, b.nama_bunga AS nama_produk FROM checkout_detail a JOIN produk b on a.id_produk=b.id");
+    $queryCheckout = mysqli_query($con , "SELECT a.*, b.nama_bunga AS nama_produk FROM checkout_detail a JOIN produk b on a.id_produk=b.id WHERE id_user='$idUser'");
     $jumlahCheckout = mysqli_num_rows($queryCheckout);
 
 
